@@ -2,6 +2,8 @@
 <manifest package="com.me.practicecode"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,11 +21,7 @@
 
         <activity android:name=".bezierview.BezierViewActivity"/>
         <activity android:name=".testview.TestActivity"/>
-
-
-        <activity android:name=".testview.PopUpActivity" android:theme="@style/MyDialogStyle">
-
-        </activity>
+        <activity android:name=".rxjava.RxJavaTestActivity"/>
 
     </application>
 

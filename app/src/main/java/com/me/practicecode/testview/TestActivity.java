@@ -19,8 +19,6 @@ public class TestActivity
         extends AppCompatActivity
 {
 
-    private Button btn_show_activity;
-    private Button btn_show_pop;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
