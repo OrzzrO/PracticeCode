@@ -1,4 +1,4 @@
-package com.me.practicecode.rxjava;
+package com.me.practicecode.rxjava.api;
 
 import com.me.practicecode.rxjava.entity.LoginRequest;
 import com.me.practicecode.rxjava.entity.LoginResponse;
