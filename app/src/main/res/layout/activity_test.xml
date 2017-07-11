@@ -6,22 +6,34 @@
     android:background="#2200ff00"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="start"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
 
-    <Button
-        android:id="@+id/btn_request"
+
+    <ImageView
+        android:id="@+id/iv_shadow"
+        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:text="Button"
-        android:layout_below="@+id/btn_start"
-        android:layout_alignStart="@+id/btn_start"/>
+        android:src="@drawable/album24"/>
+
+
+
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_start"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="start"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_centerHorizontal="true"/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_request"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="13dp"-->
+        <!--android:text="Button"-->
+        <!--android:layout_below="@+id/btn_start"-->
+        <!--android:layout_alignStart="@+id/btn_start"/>-->
 
 
 </RelativeLayout>
