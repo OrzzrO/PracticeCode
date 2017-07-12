@@ -6,6 +6,7 @@ import android.widget.Button;
 
 import com.me.practicecode.R;
 import com.me.practicecode.realm.RealmBaseActivity;
+import com.me.practicecode.realm.async.RealmAsyncActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -52,8 +53,10 @@ public class RealmTestActivity
                 startActivity(RealmAddActivity.class);
                 break;
             case R.id.btn_query_and_modify:
+                startActivity(RealmQueryActivity.class);
                 break;
             case R.id.btn_async:
+                startActivity(RealmAsyncActivity.class);
                 break;
         }
     }

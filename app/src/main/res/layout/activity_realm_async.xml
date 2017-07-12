@@ -5,39 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/toolbar"></include>
+    <include layout="@layout/toolbar"/>
 
     <Button
-        android:id="@+id/btn_query_all"
+        android:id="@+id/btn_query_add_delete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
         android:textColor="@android:color/white"
-        android:text="查询所有 ,修改"/>
+        android:text="异步 增加, 删除"/>
+
+
 
     <Button
-        android:id="@+id/btn_query_condition"
+        android:id="@+id/btn_query_modify_query"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
         android:textColor="@android:color/white"
-        android:text="条件查询"/>
-
-
-    <Button
-        android:id="@+id/btn_query_other"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        android:textColor="@android:color/white"
-        android:text="其他查询"/>
-
+        android:text="异步 修改, 查询"/>
 
 
 </LinearLayout>

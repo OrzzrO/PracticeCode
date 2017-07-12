@@ -6,7 +6,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.me.practicecode.R;
 import com.me.practicecode.realm.RealmBaseActivity;
-import com.me.practicecode.realm.adapter.UserAdapter;
+import com.me.practicecode.realm.adapter.AddAdapter;
 import com.me.practicecode.realm.bean.User;
 
 import java.util.ArrayList;
@@ -41,8 +41,9 @@ public class RealmAddActivity
 
     private void initRecyclerView() {
         mRecyclerview.setLayoutManager(new LinearLayoutManager(this));
-        UserAdapter userAdapter = new UserAdapter(this, mDatas, R.layout.item_user);
-        mRecyclerview.setAdapter(userAdapter);
+        AddAdapter addAdapter = new AddAdapter(this, mDatas, R.layout.item_user);
+        mRecyclerview.setAdapter(addAdapter);
+
 
     }
 

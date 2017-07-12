@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -25,6 +26,15 @@
         <activity android:name=".rxjava.RxJavaTestActivity"/>
         <activity android:name=".realm.ui.RealmAddActivity"/>
         <activity android:name=".realm.ui.RealmTestActivity"/>
+        <activity android:name=".realm.ui.RealmQueryActivity"/>
+        <activity android:name=".realm.ui.RealmQueryAllActivity"/>
+       <activity android:name=".realm.ui.RealmUpdateAcitivity"/>
+        <activity android:name=".realm.ui.RealmQueryConditionActivity"/>
+        <activity android:name=".realm.ui.RealmQueryOtherActivity"/>
+        <activity android:name=".realm.async.AsyncAddActivity"/>
+        <activity android:name=".realm.async.RealmAsyncActivity"/>
+        <activity android:name=".realm.async.AsyncQueryActivity"/>
+        <activity android:name=".realm.async.AysncUpdateActivity"/>
 
     </application>
 

@@ -17,6 +17,9 @@
             name="colorAccent">
             @color/colorAccent
         </item>
+    <!--toolbar 小箭头的颜色的设定-->
+        <item name="colorControlNormal">@android:color/white</item>
+
     </style>
 
     <style

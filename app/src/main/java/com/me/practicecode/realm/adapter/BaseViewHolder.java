@@ -35,4 +35,9 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
         return this;
     }
 
+    public BaseViewHolder setViewVisibility(int viewid, int flag) {
+        View view = getView(viewid);
+        view.setVisibility(flag);
+        return this;
+    }
 }

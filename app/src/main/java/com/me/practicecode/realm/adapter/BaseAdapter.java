@@ -35,9 +35,19 @@ public abstract class BaseAdapter<T>
     }
 
     @Override
-    public void onBindViewHolder(BaseViewHolder holder, int position) {
+    public void onBindViewHolder(BaseViewHolder holder, final int position) {
 
         parseData(mContext,holder,mDatas.get(position));
+
+        if (mOnItemClickListener != null){
+            holder.mItemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mOnItemClickListener.itemClick(v,position);
+                }
+            });
+        }
+
     }
 
     /**
@@ -52,4 +62,18 @@ public abstract class BaseAdapter<T>
     public int getItemCount() {
         return mDatas == null ? 0 : mDatas.size();
     }
+
+    /**
+     * 条目点击的接口回调
+     */
+    public onItemClickListener mOnItemClickListener;
+
+    public interface onItemClickListener{
+        void itemClick(View v,int position);
+    }
+
+    public void setonItemClickListener(onItemClickListener listener){
+        mOnItemClickListener = listener;
+    }
+
 }

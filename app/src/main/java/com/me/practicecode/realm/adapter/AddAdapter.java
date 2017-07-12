@@ -15,13 +15,14 @@ import java.util.List;
  * Created by user on 2017/7/11.
  */
 
-public class UserAdapter extends BaseAdapter<User> {
+public class AddAdapter
+    extends BaseAdapter<User> {
 
     private final RealmHelper mRealmHelper;
 
-    public UserAdapter(Context context, List<User> datas, int layoutId) {
+    public AddAdapter(Context context, List<User> datas, int layoutId) {
         super(context, datas, layoutId);
-        mRealmHelper = new RealmHelper();
+        mRealmHelper = new RealmHelper(context);
     }
 
 

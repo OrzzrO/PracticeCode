@@ -4,7 +4,11 @@ import android.content.Context;
 
 import com.me.practicecode.realm.bean.User;
 
+import java.util.List;
+
 import io.realm.Realm;
+import io.realm.RealmAsyncTask;
+import io.realm.RealmResults;
 
 /**
  * Created by user on 2017/7/11.
@@ -61,6 +65,56 @@ public class RealmHelper {
         mRealm.commitTransaction();
     }
 
+    /**
+     *  改
+     * @param id
+     * @param str
+     */
+    public void updateUser(int id,String str){
+        User user = mRealm
+            .where(User.class)
+            .equalTo("id", id)
+            .findFirst();
+        mRealm.beginTransaction();
+        user.setName(str);
+        mRealm.commitTransaction();
+
+    }
+
+    /**
+     * 查询所有
+     * @return 返回数据集合.
+     */
+    public List<User> queryAll(){
+        RealmResults<User> users = mRealm
+            .where(User.class)
+            .findAll();
+
+        //对查询结果进行排序.
+        //通过id进行排序,默认是增序,
+        //可以降序
+        users = users.sort("id");
+        return mRealm.copyFromRealm(users);
+    }
+
+    //通过id查询
+    public User queryUserById(int id){
+        User user = mRealm
+            .where(User.class)
+            .equalTo("id", id)
+            .findFirst();
+        return user;
+    }
+
+    //通过年龄查询
+    public List<User> queryUserByAge(int age){
+        RealmResults<User> users = mRealm
+            .where(User.class)
+            .equalTo("age", age)
+            .findAll();
+        return mRealm.copyFromRealm(users);
+    }
+
 
 
     public boolean isUserExist(int id){
@@ -71,4 +125,17 @@ public class RealmHelper {
         return user == null ? false : true;
     }
 
+    public Realm getRealm(){
+        return mRealm;
+    }
+
+    /**
+     * 取消任务
+     * @param task
+     */
+    public void cancelAsyncRealTask(RealmAsyncTask task) {
+        if (task != null && !task.isCancelled()){
+            task.cancel();
+        }
+    }
 }
