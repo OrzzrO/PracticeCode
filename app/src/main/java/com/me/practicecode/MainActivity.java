@@ -10,6 +10,7 @@ import android.widget.SimpleAdapter;
 
 import com.me.practicecode.bezierview.BezierViewActivity;
 import com.me.practicecode.realm.ui.RealmTestActivity;
+import com.me.practicecode.retrofit.RetrofitDemoActivity;
 import com.me.practicecode.rxjava.RxJavaTestActivity;
 import com.me.practicecode.testview.TestActivity;
 
@@ -49,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
         itemData.put("text","Realm_Demo");
         itemData.put("class", RealmTestActivity.class);
         data.add(itemData);
+
+        itemData = new HashMap<>();
+        itemData.put("text","retrofit_Demo");
+        itemData.put("class", RetrofitDemoActivity.class);
+        data.add(itemData);
+
 
         SimpleAdapter simpleAdapter = new SimpleAdapter(MainActivity.this, data, android.R.layout
                 .simple_list_item_1, new String[]{"text"}, new int[]{android.R.id.text1});

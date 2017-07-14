@@ -35,6 +35,7 @@
         <activity android:name=".realm.async.RealmAsyncActivity"/>
         <activity android:name=".realm.async.AsyncQueryActivity"/>
         <activity android:name=".realm.async.AysncUpdateActivity"/>
+        <activity android:name=".retrofit.RetrofitDemoActivity"/>
 
     </application>
 
