@@ -9,6 +9,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.me.practicecode.bezierview.BezierViewActivity;
+import com.me.practicecode.dagger2.Dagger2DemoActivity;
 import com.me.practicecode.realm.ui.RealmTestActivity;
 import com.me.practicecode.retrofit.RetrofitDemoActivity;
 import com.me.practicecode.rxjava.RxJavaTestActivity;
@@ -54,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
         itemData = new HashMap<>();
         itemData.put("text","retrofit_Demo");
         itemData.put("class", RetrofitDemoActivity.class);
+        data.add(itemData);
+
+        itemData = new HashMap<>();
+        itemData.put("text","dagger2_demo");
+        itemData.put("class", Dagger2DemoActivity.class);
         data.add(itemData);
 
 

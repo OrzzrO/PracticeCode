@@ -36,6 +36,7 @@
         <activity android:name=".realm.async.AsyncQueryActivity"/>
         <activity android:name=".realm.async.AysncUpdateActivity"/>
         <activity android:name=".retrofit.RetrofitDemoActivity"/>
+        <activity android:name=".dagger2.Dagger2DemoActivity"/>
 
     </application>
 

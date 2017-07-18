@@ -82,6 +82,8 @@ public class RetrofitDemoActivity extends BaseActivity{
         //利用有道api获得有效的url
         Map<String, String> maps = YoudaoApiUtil.generateUrl(word);
         Call<YoudaoTranslation> call = api.getCall(maps);
+
+        //异步 android回调在主线程
         call.enqueue(new Callback<YoudaoTranslation>() {
             @Override
             public void onResponse(Call<YoudaoTranslation> call, Response<YoudaoTranslation> response) {
